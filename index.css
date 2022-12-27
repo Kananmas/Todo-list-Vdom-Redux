@@ -1,0 +1,80 @@
+
+body {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.done{
+    border: 1px solid gray;
+    padding: 0.5em;
+    border-radius: 6px;
+    box-shadow: 2px 4px silver;
+    margin-top:10px;
+}
+
+.done .checked-box {
+    float: left;
+}
+
+.done .task-text{
+    width: 80%;
+    margin-left: 1%;
+    margin-right: 0%;
+    text-align: center;
+    text-align: start;
+    float: left;
+    text-decoration: line-through;
+
+}
+
+#taskField {
+    width: 28vw;
+    height: 3vh;
+    font-size: 16px;
+}
+
+#AddTask{
+    width: 7vw;
+    height: 3.5vh;
+    margin-bottom: 10px;
+}
+
+.done .task-remover {
+    max-width: 144px;
+    max-height: 144px;
+}
+
+.task {
+    border: 1px solid gray;
+    padding: 0.5em;
+    border-radius: 6px;
+    box-shadow: 2px 4px silver;
+    margin-top:6px;
+}
+
+.task .checked-box {
+    float: left;
+}
+
+.task .task-text{
+    width: 80%;
+    margin-left: 1%;
+    margin-right: 0%;
+    text-align: center;
+    text-align: start;
+    float: left;
+
+}
+
+.task.task-remover {
+    max-width: 144px;
+    max-height: 144px;
+    background-color: brown;
+}
+.task-remover {
+    background-color: brown;
+    color: aliceblue;
+}
