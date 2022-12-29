@@ -4,8 +4,9 @@ import createCopyElement from "./createCopyElement";
 import { isEqual } from "./isEqual";
 
 export default function deepDiff(node = document.createElement('div'), targetNode = document.createElement('div')) {
-    
-      let events = ['onclick', 'onchange'];
+
+    let events = ['onclick', 'onchange'];
+    // console.log(getEventListeners(targetNode))
 
     if (!isEqual(node, targetNode)) {
         node.replaceWith(diffProps(node, targetNode))
@@ -23,7 +24,7 @@ export default function deepDiff(node = document.createElement('div'), targetNod
     }
 
     if (!targetNode.children.length && node.children.length) {
-       for (let childNode of node.children) {
+        for (let childNode of node.children) {
             for (let event of events) {
                 if (childNode[event]) {
                     let simplified = event.slice(2)
