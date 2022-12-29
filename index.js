@@ -126,15 +126,13 @@ function onhandleChangeCheckBox(e) {
 
     updateDom();
 }
-
-
 function updateDom() {
-    let formerStore = render(store.getState());
     let root = document.getElementById('root')
     let renderdStore = render(store.getState());
 
     if (!root.children.length) root.appendChild(renderdStore)
     else {
-        root.replaceChildren(deepDiff(formerStore, renderdStore))
+
+        deepDiff(root.children[0], renderdStore)
     }
 }
