@@ -14,7 +14,7 @@ export default function createCopyElement(el = document.createElement('div')) {
         copyEl.textContent = el.textContent
     }
     for (let event of events) {
-        if (el[event] !== undefined) {
+        if (el[event]) {
             copyEl[event] = el[event]
         }
     }
