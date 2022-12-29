@@ -1,4 +1,5 @@
 export default function render(Nodes = [], root = document.createElement('div')) {
+    let events = ['click', 'change']
     if (!Nodes.length) return root;
 
     for (let node of Nodes) {
@@ -6,7 +7,10 @@ export default function render(Nodes = [], root = document.createElement('div'))
         let element = document.createElement(type);
 
         for (const [key, value] of Object.entries(props)) {
-            element.setAttribute(key, value);
+            if (!events.includes(key)) { element.setAttribute(key, value); }
+            else {
+                element['on' + key] = value;
+            }
         }
 
         if (children.length) {
